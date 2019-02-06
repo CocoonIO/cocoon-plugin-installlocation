@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.ludei.installlocation.android"
+    version="2.0.0">
+
+    <name>Cocoon Install Location Android Plugin</name>
+    <description>
+        Plugin to modify the install location in Android.
+        Accepts preference "android-installLocation" to set the install location.
+        Valid values are: ["auto" | "internalOnly" | "preferExternal"]. http://developer.android.com/guide/topics/manifest/manifest-element.html#install
+        The default install location is "internalOnly".
+    </description>
+    <license>Copyright Ludei</license>
+    <keywords>cordova, ludei, cocoon, sdcard, android</keywords>
+    <repo>https://bitbucket.org/ludei/cocoon_plugins</repo>
+
+    <engines>
+      <engine name="cordova-android" version=">=7" />
+      <engine name="cordova-plugman" version=">=4.2.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+        <hook type="after_install" src="scripts/after_install.js" />
+    </platform>
+</plugin>
